@@ -1,0 +1,13 @@
+[submodule "sequences/rtspiral_pypulseq"]
+	path = sequences/rtspiral_pypulseq
+	url = git@github.com:usc-mrel/rtspiral_pypulseq.git
+	branch = cine_tagging
+[submodule "reconstruction/usc_dynamic_reconstruction"]
+	path = reconstruction/usc_dynamic_reconstruction
+	url = git@github.com:usc-mrel/usc_dynamic_reconstruction.git
+[submodule "reconstruction/ismrm_sunrise_matlab"]
+	path = reconstruction/ismrm_sunrise_matlab
+	url = git@github.com:hansenms/ismrm_sunrise_matlab.git
+[submodule "reconstruction/ismrmrd"]
+	path = reconstruction/ismrmrd
+	url = git@github.com:ismrmrd/ismrmrd.git
