@@ -10,4 +10,4 @@
 	url = git@github.com:hansenms/ismrm_sunrise_matlab.git
 [submodule "reconstruction/ismrmrd"]
 	path = reconstruction/ismrmrd
-	url = git@github.com:ismrmrd/ismrmrd.git
+	url = https://github.com/ismrmrd/ismrmrd
