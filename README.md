@@ -10,9 +10,15 @@ Pulse Sequences are developed using Pypulseq and are located as a submodule to a
 
 To run pulse sequences, please `cd sequences/rtspiral_pypulseq`
 
-To generate the real-time speech sequence, please run `python write_rtspiral.py -c protocols/speech_bssfp_dynamic_tagging_055T.toml`
+To generate the real-time speech sequence, please run 
+```
+python write_rtspiral.py -c protocols/speech_bssfp_dynamic_tagging_055T.toml
+```
 
-To generate real-time cardiac sequence, please run `python write_rtspiral_cine.py -c protocols/cardiac_bssfp_cine_055T.toml`. 
+To generate real-time cardiac sequence, please run 
+```
+python write_rtspiral_cine.py -c protocols/cardiac_bssfp_cine_055T.toml
+``` 
 
 Sequences will be generated in the `out_seq` folder.
 
@@ -21,13 +27,17 @@ Reconstruction depends on the `usc_dynamic_reconstruction` toolbox, `ismrmrd`, a
 In order to use the `usc_dynamic_reconstruction` toolbox, please follow it's README: the `Michigan image reconstruction toolbox (MIRT)` is requied as a dependency.
 
 ### Usage:
-To reconstruct speech data, you can run the following in your MATLAB terminal after downloading the data. \n
-  `cd reconstruction/speech`
-  `recon_STCR_2D`
+To reconstruct speech data, you can run the following in your MATLAB terminal after downloading the data: <br>
+```
+cd reconstruction/speech
+recon_STCR_2D
+```
 
-To reconstruct speech data, you can run the following in your MATLAB terminal:
-  `cd reconstruction/cardiac`
-  `recon_cine_2d`
+To reconstruct speech data, you can run the following in your MATLAB terminal: <br>
+```
+cd reconstruction/cardiac
+recon_cine_2d
+```
   
 ## Directory Hierarchy for Raw Data
 The code expects raw data in the following hierarchy:
