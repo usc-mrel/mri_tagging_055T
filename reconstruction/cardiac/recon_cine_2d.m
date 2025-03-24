@@ -1,8 +1,10 @@
 clear; clc; close all;
 
+DATA_PATH = '../../data/cardiac/';
+TRAJ_SEARCH_PATH = DATA_PATH;
 USC_RECON_PATH = '../usc_dynamic_reconstruction/';
-ISMRMRDPATH = '../../data/cardiac/h5/';
-NOISEPATH = '../../data/cardiac/noise/';
+ISMRMRDPATH = [DATA_PATH, 'h5/'];
+NOISEPATH = [DATA_PATH, 'noise/'];
 
 addpath("../ismrmrd/matlab/")
 addpath("../ismrm_sunrise_matlab/")
@@ -21,11 +23,11 @@ if USE_GPU
 end
 
 % File paths
-TRAJ_SEARCH_PATH = '../../trajectories/';
+
 
 file_paths = dir(fullfile([ISMRMRDPATH, '*.h5']));
 
-for file_idx = 2:length(file_paths) % 1:12
+for file_idx = 1:length(file_paths)
 
     fprintf('File %d of %d\n', file_idx, length(file_paths));
      

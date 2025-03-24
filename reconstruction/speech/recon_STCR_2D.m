@@ -157,6 +157,7 @@ for file_idx = [1:nfile] % 8:nfile
     [xf, cost] = STCR_2D_NCG_TTV_STV(E*C, first_estimate, kspace, tTV, sTV);
     
     xf = phaseSensitiveIR(xf, 10);
+    xf = rectify_pk(xf);
     
     save(['recon_STCR/', file_paths(file_idx).name(1:end-3), '.mat'], 'xf', 'cost', 'header');
 
