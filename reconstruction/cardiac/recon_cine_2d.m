@@ -16,14 +16,11 @@ addpath(USC_RECON_PATH);
 
 % options   
 PHASE_SENSITIVE_IR = 1;
-USE_GPU = 0;
+USE_GPU = 1;
 
 if USE_GPU
-    gpuDevice(2)
+    gpuDevice(1)
 end
-
-% File paths
-
 
 file_paths = dir(fullfile([ISMRMRDPATH, '*.h5']));
 

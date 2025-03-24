@@ -1,8 +1,10 @@
 clear; clc; close all;
 
+DATA_PATH = '../../data/speech/';
+TRAJ_SEARCH_PATH = DATA_PATH;
 USC_RECON_PATH = '../usc_dynamic_reconstruction/';
-ISMRMRDPATH = '../../data/speech/h5/';
-NOISEPATH = '../../data/speech/noise/';
+ISMRMRDPATH = [DATA_PATH, 'h5/'];
+NOISEPATH = [DATA_PATH, 'noise/'];
 
 addpath("../ismrmrd/matlab/")
 addpath("../ismrm_sunrise_matlab/")
@@ -17,17 +19,15 @@ PHASE_SENSITIVE_IR = 1;
 USE_GPU = 1;
 
 if USE_GPU
-    gpuDevice(2)
+    gpuDevice(1);
 end
 
 % File paths
-TRAJ_SEARCH_PATH = '../trajectories/';
-
 file_paths = dir(fullfile([ISMRMRDPATH, '*.h5']));
 nfile = length(file_paths);
 USE_GPU = 1;
 
-for file_idx = [1:nfile] % 8:nfile
+for file_idx = [1:nfile]
      fprintf('File %d of %d\n', file_idx, length(file_paths));
      
      clearvars -except FOV ISMRMRDPATH NOISEPATH TRAJ_SEARCH_PATH file_paths file_idx USE_GPU
