@@ -24,7 +24,7 @@ Sequences will be generated in the `out_seq` folder.
 
 ## Reconstruction
 Reconstruction depends on the `usc_dynamic_reconstruction` toolbox, `ismrmrd`, and `ismrm_sunrise_matlab`, which are all included as submodules in this repository. 
-In order to use the `usc_dynamic_reconstruction` toolbox, please follow it's README: the `Michigan image reconstruction toolbox (MIRT)` is requied as a dependency.
+In order to use the `usc_dynamic_reconstruction` toolbox, please follow it's README. To use it, the [Michigan Image Reconstruction Toolbox (MIRT)](https://github.com/JeffFessler/mirt) is requied as a dependency.
 
 ### Usage:
 To reconstruct speech data, you can run the following in your MATLAB terminal after downloading the data: <br>
