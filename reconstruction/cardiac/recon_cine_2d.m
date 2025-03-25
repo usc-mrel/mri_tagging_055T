@@ -16,7 +16,7 @@ addpath(USC_RECON_PATH);
 
 % options   
 PHASE_SENSITIVE_IR = 1;
-USE_GPU = 1;
+USE_GPU = 0;
 
 if USE_GPU
     gpuDevice(1)
@@ -159,12 +159,8 @@ for file_idx = 1:length(file_paths)
 
     %% export to video
     filename_out = [ismrmrdfile(1:end-3)];
-    frameRate = 5;
-    
-    image_cc = flipud(image_cc);
-    image_stcr = flipud(image_stcr);
-    mkdirIfNotExist('recon_out_tag');
-    save(['recon_out_tag/', filename_out, '_STCR.mat'], 'image_cc', 'image_stcr', 'param', 'header');
+    image_cc = rectify_pk(flipud(image_cc));
+    image_stcr = rectify_pk(flipud(image_stcr));
+    mkdirIfNotExist('recon');
+    save(['recon/', filename_out, '_STCR.mat'], 'image_cc', 'image_stcr', 'param', 'header');
 end
-
-export_video
