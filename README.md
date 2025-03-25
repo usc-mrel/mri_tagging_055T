@@ -3,7 +3,7 @@
 This is a collection of pulse sequences developed in PyPulseq, and reconstruction algorithms written in MATLAB.
 
 ## Dataset
-Dataset is located [here](https://zenodo.org/records/15079693).
+Dataset is located [here](https://zenodo.org/records/15079693). Please place the data in the `data` directory in the root of this folder.
 
 ## Pulse Sequence Design
 Pulse Sequences are developed using Pypulseq and are located as a submodule to another repository in sequences/rtspiral_pypulseq. To generate pulse sequences, please install all dependencies using the README located in [rtspiral_pypulseq](https://github.com/usc-mrel/rtspiral_pypulseq/tree/1721c6efdcb8dc940a0cfe7b1fd642068fe994b8).
