@@ -20,7 +20,7 @@ To generate real-time cardiac sequence, please run
 python write_rtspiral_cine.py -c protocols/cardiac_bssfp_cine_055T.toml
 ``` 
 
-Sequences will be generated in the `out_seq` folder.
+Expected output: sequences will be generated in the `out_seq` folder.
 
 ## Reconstruction
 Reconstruction depends on the `usc_dynamic_reconstruction` toolbox, `ismrmrd`, and `ismrm_sunrise_matlab`, which are all included as submodules in this repository. 
@@ -33,11 +33,14 @@ cd reconstruction/speech
 recon_STCR_2D
 ```
 
+Expected output: reconstruction in `reconstruction/speech/recon/*.mat` inside image_stcr variable.
+
 To reconstruct speech data, you can run the following in your MATLAB terminal: <br>
 ```
 cd reconstruction/cardiac
 recon_cine_2d
 ```
+Expected output: reconstruction in `reconstruction/speech/recon/*.mat` inside image_stcr variable.
   
 ## Directory Hierarchy for Raw Data
 The code expects raw data in the following hierarchy:
