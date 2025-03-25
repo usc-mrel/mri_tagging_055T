@@ -27,6 +27,12 @@ Reconstruction depends on the `usc_dynamic_reconstruction` toolbox, `ismrmrd`, a
 In order to use the `usc_dynamic_reconstruction` toolbox, please follow it's README. To use it, the [Michigan Image Reconstruction Toolbox (MIRT)](https://github.com/JeffFessler/mirt) is requied as a dependency.
 
 ### Usage:
+By default, the use of the GPU is set to off, but if you have a GPU, turning it on will greatly increase reconstruction speed. Please change the flag:
+```
+USE_GPU=1 % (line 19 on either recon script)
+```
+to enable.
+
 To reconstruct speech data, you can run the following in your MATLAB terminal after downloading the data: <br>
 ```
 cd reconstruction/speech
