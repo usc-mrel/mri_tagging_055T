@@ -77,6 +77,6 @@ This project includes code from the following open source libraries:
 - usc_dynamic_reconstruction [MIT](https://github.com/usc-mrel/usc_dynamic_reconstruction/blob/main/LICENSE)
 
 Copyright (c) 2025 Prakash Kumar, Magnetic Resonance Engineering Laboratory. 
-MIT [license](https://github.com/usc-mrel/mri_tagging_055T/blob/main/LICENSE).
+[MIT license](https://github.com/usc-mrel/mri_tagging_055T/blob/main/LICENSE).
 
 
