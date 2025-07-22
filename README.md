@@ -2,11 +2,18 @@
 
 This is a collection of pulse sequences developed in PyPulseq, and reconstruction algorithms written in MATLAB.
 
+## Versions and Instructions
+The dependencies needed for this project are listed as github submodules. To ensure you download the submodules, please use `recurse-submodules`, so, e.g.
+`git clone --recurse-submodules git@github.com:usc-mrel/mri_tagging_055T.git`
+
+Tested on MATLAB R2021b, but more modern versions should also work.
+Tested on Python 3.11.8.
+
 ## Dataset
 Dataset is located [here](https://zenodo.org/records/15079693). Please place the data in the `data` directory in the root of this folder.
 
 ## Pulse Sequence Design
-Pulse Sequences are developed using Pypulseq and are located as a submodule to another repository in sequences/rtspiral_pypulseq. To generate pulse sequences, please install all dependencies using the README located in [rtspiral_pypulseq](https://github.com/usc-mrel/rtspiral_pypulseq/tree/1721c6efdcb8dc940a0cfe7b1fd642068fe994b8). We tested all sequence development code using the python version 3.11.8.
+Pulse Sequences are developed using Pypulseq and are located as a submodule to another repository in sequences/rtspiral_pypulseq. To generate pulse sequences, please install all dependencies using the README located in [rtspiral_pypulseq](https://github.com/usc-mrel/rtspiral_pypulseq/tree/1721c6efdcb8dc940a0cfe7b1fd642068fe994b8).
 
 To run pulse sequences, please `cd sequences/rtspiral_pypulseq`
 
