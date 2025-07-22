@@ -6,7 +6,7 @@ This is a collection of pulse sequences developed in PyPulseq, and reconstructio
 Dataset is located [here](https://zenodo.org/records/15079693). Please place the data in the `data` directory in the root of this folder.
 
 ## Pulse Sequence Design
-Pulse Sequences are developed using Pypulseq and are located as a submodule to another repository in sequences/rtspiral_pypulseq. To generate pulse sequences, please install all dependencies using the README located in [rtspiral_pypulseq](https://github.com/usc-mrel/rtspiral_pypulseq/tree/1721c6efdcb8dc940a0cfe7b1fd642068fe994b8).
+Pulse Sequences are developed using Pypulseq and are located as a submodule to another repository in sequences/rtspiral_pypulseq. To generate pulse sequences, please install all dependencies using the README located in [rtspiral_pypulseq](https://github.com/usc-mrel/rtspiral_pypulseq/tree/1721c6efdcb8dc940a0cfe7b1fd642068fe994b8). We tested all sequence development code using the python version 3.11.8.
 
 To run pulse sequences, please `cd sequences/rtspiral_pypulseq`
 
@@ -64,3 +64,19 @@ The code expects raw data in the following hierarchy:
 
 
 SEQUENCEHASH.mat is the metadata file generated during sequence design, and should be put in `reconstruction/trajectories/`. Refer to rtspiral_pypulseq for the details.
+
+
+## Attributions
+
+This code includes elements from various sources, and a best effort has been made to attribute all contributions accurately. If you identify any missing or incorrect attributions, please contact me (prakashk AT usc DOT edu) so that we can correct them. We appreciate your understanding and cooperation in ensuring proper attribution for all utilized code.
+
+This project includes code from the following open source libraries: 
+- Pypulseq [AGPL](https://github.com/imr-framework/pypulseq/blob/master/LICENSE)
+- ISMRM sunrise toolbox [no license](https://github.com/hansenms/ismrm_sunrise_matlab)
+- Michigan IRT [MIT](https://github.com/JeffFessler/mirt/blob/main/LICENSE)
+- usc_dynamic_reconstruction [MIT](https://github.com/usc-mrel/usc_dynamic_reconstruction/blob/main/LICENSE)
+
+Copyright (c) 2025 Prakash Kumar, Magnetic Resonance Engineering Laboratory. 
+[MIT license](https://github.com/usc-mrel/mri_tagging_055T/blob/main/LICENSE).
+
+
