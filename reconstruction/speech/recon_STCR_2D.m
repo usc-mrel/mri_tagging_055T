@@ -7,7 +7,10 @@ ISMRMRDPATH = [DATA_PATH, 'h5/'];
 NOISEPATH = [DATA_PATH, 'noise/'];
 
 addpath("../ismrmrd/matlab/")
-addpath("../ismrm_sunrise_matlab/")
+addpath("../ismrm_sunrise_matlab/") % for noise_ dependencies
+addpath("../ismrm_sunrise_matlab/irt/systems/") % for fatrix dependency
+addpath("../ismrm_sunrise_matlab/irt/utilities/") % for vararg dependency
+addpath("../ismrm_sunrise_matlab/irt/penalty/") % for penalty function dependency
 addpath("../girf/")
 addpath([USC_RECON_PATH, 'encoding/']);
 addpath([USC_RECON_PATH, 'optim/']);
@@ -25,7 +28,6 @@ end
 % File paths
 file_paths = dir(fullfile([ISMRMRDPATH, '*.h5']));
 nfile = length(file_paths);
-USE_GPU = 1;
 
 for file_idx = [1:nfile]
      fprintf('File %d of %d\n', file_idx, length(file_paths));
@@ -135,7 +137,9 @@ for file_idx = [1:nfile]
     w = w + eps; % fixing dcf (numerically?)
     rootw = sqrt(w');
     kspace = kspace .* rootw;
-    kspace = gpuArray(kspace);
+    if USE_GPU
+        kspace = gpuArray(kspace);
+    end
     E = Fnufft_2D(kx, ky, n_coil, matrix_size, USE_GPU, rootw, 1.5, [4, 4]);
     x0_ = E' * kspace;
     

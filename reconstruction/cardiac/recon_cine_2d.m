@@ -7,7 +7,10 @@ ISMRMRDPATH = [DATA_PATH, 'h5/'];
 NOISEPATH = [DATA_PATH, 'noise/'];
 
 addpath("../ismrmrd/matlab/")
-addpath("../ismrm_sunrise_matlab/")
+addpath("../ismrm_sunrise_matlab/") % for noise_ dependencies
+addpath("../ismrm_sunrise_matlab/irt/systems/") % for fatrix dependency
+addpath("../ismrm_sunrise_matlab/irt/utilities/") % for vararg dependency
+addpath("../ismrm_sunrise_matlab/irt/penalty/") % for penalty function dependency
 addpath("../girf/")
 addpath([USC_RECON_PATH, 'encoding/']);
 addpath([USC_RECON_PATH, 'optim/']);
