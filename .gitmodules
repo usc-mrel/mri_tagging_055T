@@ -1,7 +1,6 @@
 [submodule "sequences/rtspiral_pypulseq"]
 	path = sequences/rtspiral_pypulseq
 	url = git@github.com:usc-mrel/rtspiral_pypulseq.git
-	branch = cine_tagging
 [submodule "reconstruction/usc_dynamic_reconstruction"]
 	path = reconstruction/usc_dynamic_reconstruction
 	url = git@github.com:usc-mrel/usc_dynamic_reconstruction.git
