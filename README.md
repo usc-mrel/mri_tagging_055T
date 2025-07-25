@@ -6,9 +6,9 @@ This is a collection of pulse sequences developed in PyPulseq, and reconstructio
 The dependencies needed for this project are listed as github submodules. To ensure you download the submodules, please use `recurse-submodules`, so, e.g.
 `git clone --recurse-submodules git@github.com:usc-mrel/mri_tagging_055T.git`
 
-Reconstruction Tested on MATLAB R2021b on (Ubuntu 22.04.4 LTS), but more modern versions of MATLAB should also work.
-Reconstruction tested on MATLAB 2024b on (MacOs).
-Tested on Python 3.11.8 on (Ubuntu 22.04.4 LTS)
+Reconstruction Tested on MATLAB R2021b on (Ubuntu 22.04.4 LTS), but more modern versions of MATLAB should also work. \
+Reconstruction tested on MATLAB 2024b on (MacOs). \
+Tested on Python 3.11.8 on (Ubuntu 22.04.4 LTS) 
 
 ## Dataset
 Dataset is located [here](https://zenodo.org/records/15079693). Please place the data in the `data` directory in the root of this folder.
