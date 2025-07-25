@@ -97,6 +97,7 @@ fitted_slopes = {};
 figure;
 set(gcf, 'Position', [0,0,1000, 800]) %,'Color', 'k')
 hold on
+labels = final_label;
 final_label = {};
 
 labelcount = 1;
@@ -125,7 +126,6 @@ for i =1:length(file_names)
 
     timescales{labelcount} = timescale;
     final_label{labelcount} = sprintf('FA = %i %c', flip_angle, char(176));
-    err = err_per_fa{labelcount};
 
      labelcount = labelcount + 1;
      n_start = 10;
@@ -135,14 +135,6 @@ for i =1:length(file_names)
 
      % Get the color of the existing line
      line_color = get(h, 'Color');
-
-    % Create error bar data with different sampling (every 10th point)    
-    sample_interval = 30;
-    start_offset = 20 + (mod(labelcount-1, sample_interval/6)) *4;  % Creates 0, 2, 4, 6, 0, 2...
-    sample_idx = (start_offset+1):sample_interval:length(timescale);
-    x_sample = timescale(sample_idx);
-    y_sample = cnr_line(sample_idx);
-    error_values = err(sample_idx);
 
      xlim([0, 1500]);
      ylim([0,50])
