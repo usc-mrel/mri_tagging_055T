@@ -6,8 +6,9 @@ This is a collection of pulse sequences developed in PyPulseq, and reconstructio
 The dependencies needed for this project are listed as github submodules. To ensure you download the submodules, please use `recurse-submodules`, so, e.g.
 `git clone --recurse-submodules git@github.com:usc-mrel/mri_tagging_055T.git`
 
-Tested on MATLAB R2021b, but more modern versions should also work.
-Tested on Python 3.11.8.
+Reconstruction Tested on MATLAB R2021b on (Ubuntu 22.04.4 LTS), but more modern versions of MATLAB should also work.
+Reconstruction tested on MATLAB 2024b on (MacOs).
+Tested on Python 3.11.8 on (Ubuntu 22.04.4 LTS)
 
 ## Dataset
 Dataset is located [here](https://zenodo.org/records/15079693). Please place the data in the `data` directory in the root of this folder.
@@ -31,7 +32,7 @@ Expected output: sequences will be generated in the `out_seq` folder.
 
 ## Reconstruction
 Reconstruction depends on the `usc_dynamic_reconstruction` toolbox, `ismrmrd`, and `ismrm_sunrise_matlab`, which are all included as submodules in this repository. 
-In order to use the `usc_dynamic_reconstruction` toolbox, please follow it's README. To use it, the [Michigan Image Reconstruction Toolbox (MIRT)](https://github.com/JeffFessler/mirt) is requied as a dependency.
+In order to use the `usc_dynamic_reconstruction` toolbox, please follow it's README. The [Michigan Image Reconstruction Toolbox (MIRT)](https://github.com/JeffFessler/mirt) is requied as a dependency, but is already included in `ismrm_sunrise_matlab` so is not needed to be installed separately.
 
 ### Usage:
 By default, the use of the GPU is set to off, but if you have a GPU, turning it on will greatly increase reconstruction speed. Please change the flag:
